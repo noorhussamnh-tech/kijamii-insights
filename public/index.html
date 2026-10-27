@@ -11,16 +11,16 @@
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Lexend:wght@400;500;700&family=Paytone+One&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Lexend:wght@400;500;700&display=swap">
 <style>
 :root {
   color-scheme: dark;
   --char: #1C1C1F; --char-2: #2A2A2D; --cream: #F2F0E9; --ink: #1C1C1F;
   --lime: #D4FF66; --lilac: #CBAFF8; --teal: #5A9E92; --muted: #B9B7AE; --muted-d: #3B3937; --accent: #CC4221;
-  /* Deck fonts: Impact for titles, Paytone One for item titles and numbers, Lexend for text.
+  /* Deck fonts: Impact for titles, Lexend for everything else.
      Anton stands in for Impact on phones, which don't have Impact. */
   --display: Impact, "Anton", "Haettenschweiler", "Arial Narrow Bold", sans-serif;
-  --title: "Paytone One", "Lexend", sans-serif;
+  --title: "Lexend", system-ui, -apple-system, sans-serif;
   --sans: "Lexend", system-ui, -apple-system, sans-serif;
 }
 * { box-sizing: border-box; }
@@ -84,7 +84,7 @@ nav.top ul a:hover { color: var(--lime); }
 .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 64px; border-top: 2px solid var(--ink); }
 .pillars div { padding: 24px 24px 0 0; }
 .pillars div + div { border-left: 1px solid rgba(29,29,31,.25); padding-left: 24px; }
-.pillars h3 { font: 400 21px/1.3 var(--title); }
+.pillars h3 { font: 700 21px/1.3 var(--title); }
 .pillars p { font-size: 15px; color: #4A4A50; margin-top: 10px; }
 @media (max-width: 820px) {
   .about { padding: 80px 0; } .about .k { width: 26vw; top: 40px; right: 24px; opacity: .8; }
@@ -105,7 +105,7 @@ nav.top ul a:hover { color: var(--lime); }
 .rigour .lede { color: var(--muted); max-width: 52ch; margin-top: 18px; font-size: 17px; }
 .blend { display: grid; grid-template-columns: 1fr 1fr 1.1fr; gap: 16px; margin-top: 56px; }
 .blend article { background: var(--char); border-radius: 14px; padding: 28px 26px 30px; }
-.blend h3 { font: 400 22px/1.25 var(--title); }
+.blend h3 { font: 700 22px/1.25 var(--title); }
 .blend h4 { font: 700 11px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 24px 0 10px; }
 .blend ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px; }
 .blend .keep li::before { content: "✓"; color: var(--lime); font-weight: 700; margin-right: 10px; }
@@ -113,9 +113,9 @@ nav.top ul a:hover { color: var(--lime); }
 .blend .drop li::before { content: "✕"; color: var(--accent); font-weight: 700; margin-right: 10px; }
 .blend .ours { background: var(--lime); color: var(--ink); }
 .blend .ours h4 { color: var(--muted-d); }
-.formula { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font: 500 15px/1.3 var(--sans); }
+.formula { margin-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font: 500 15px/1.3 var(--sans); }
 .formula span { background: var(--ink); color: #fff; border-radius: 999px; padding: 9px 14px; }
-.formula b { font: 400 22px/1 var(--title); }
+.formula b { font: 700 22px/1 var(--title); }
 .formula .story { background: #fff; color: var(--ink); font-weight: 700; }
 .result { display: flex; gap: 8px; flex-wrap: wrap; }
 .result span { font: 400 clamp(26px, 3vw, 34px)/1 var(--display); text-transform: uppercase; }
@@ -144,12 +144,12 @@ nav.top ul a:hover { color: var(--lime); }
 .case .logo img { max-height: 60px; width: auto; }
 .case ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
 .case li { display: grid; grid-template-columns: 30px 1fr; }
-.case li b { display: block; font: 400 19px/1.3 var(--title); margin-bottom: 2px; }
+.case li b { display: block; font: 700 19px/1.3 var(--title); margin-bottom: 2px; }
 .case li span { font-size: 14px; opacity: .85; }
-.case li::before { font: 400 19px/1.3 var(--title); }
+.case li::before { font: 700 19px/1.3 var(--title); }
 .case li:nth-child(1)::before { content: "1"; } .case li:nth-child(2)::before { content: "2"; } .case li:nth-child(3)::before { content: "3"; }
 .stat { display: flex; align-items: baseline; gap: 14px; margin-top: 30px; }
-.stat strong { font: 400 clamp(42px, 5.4vw, 60px)/1 var(--title); color: var(--accent); }
+.stat strong { font: 700 clamp(42px, 5.4vw, 60px)/1 var(--title); color: var(--accent); }
 .stat span { font-size: 14px; color: var(--muted-d); max-width: 14ch; }
 .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 26px; }
 .chips span { background: var(--ink); color: #fff; font: 500 12px/1 var(--sans); padding: 9px 14px; border-radius: 999px; }
@@ -175,19 +175,20 @@ nav.top ul a:hover { color: var(--lime); }
 .event-case p { color: #C9C9D1; }
 .event-case .shot { border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.1); box-shadow: 0 30px 60px -30px rgba(0,0,0,.8); }
 .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; }
-.kpis strong { display: block; font: 400 clamp(28px, 3.4vw, 40px)/1 var(--title); }
+.kpis strong { display: block; font: 700 clamp(28px, 3.4vw, 40px)/1 var(--title); }
 .kpis span { font-size: 13px; color: var(--muted); }
 .kpis-label { font: 700 12px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .kpi-box { background: var(--char-2); border-radius: 16px; padding: 36px 32px; border-top: 3px solid var(--lime); }
 .kpi-box .kpis strong { font-size: clamp(32px, 4.4vw, 54px); }
 .kpi-box .live { margin-top: 26px; font-size: 14px; }
 .kpi-box .live a { color: var(--lime); }
-.views { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 80px; }
+.views-title { font: 400 clamp(26px, 3vw, 34px)/1.1 var(--display); margin-top: 80px; }
+.views { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 28px; }
 .views h4 { color: #fff; font: 700 18px/1.3 var(--sans); letter-spacing: 0; text-transform: none; margin: 18px 0 6px; }
 .views a { text-decoration: none; }
 .views a:hover h4 { color: var(--lime); }
 .views p { font-size: 15px; }
-@media (max-width: 900px) { .event-case { padding: 80px 0; } .event-case .grid, .views { grid-template-columns: 1fr; gap: 36px; } .views { margin-top: 56px; } }
+@media (max-width: 900px) { .event-case { padding: 80px 0; } .event-case .grid, .views { grid-template-columns: 1fr; gap: 36px; } .views-title { margin-top: 56px; } }
 
 /* Services etc. */
 .qd { padding: 120px 0; }
@@ -199,22 +200,23 @@ nav.top ul a:hover { color: var(--lime); }
 .services { padding: 110px 0; }
 .svc { list-style: none; margin: 48px 0 0; padding: 0; border-top: 1px solid rgba(29,29,31,.85); }
 .svc li { display: grid; grid-template-columns: 70px minmax(220px, 1fr) 1.3fr; gap: 16px; padding: 24px 0; border-bottom: 1px solid rgba(29,29,31,.85); align-items: baseline; }
+.num { font: 700 24px/1 var(--title); color: var(--lime); }
 .svc .num { color: var(--accent); font-size: 22px; }
-.svc h3 { font: 400 21px/1.3 var(--title); }
+.svc h3 { font: 700 21px/1.3 var(--title); }
 .svc p { color: var(--muted-d); font-size: 15px; }
 @media (max-width: 760px) { .services { padding: 80px 0; } .svc li { grid-template-columns: 48px 1fr; } .svc p { grid-column: 2; } }
 
 .lenses { padding: 110px 0; }
 .lens-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
 .lens-grid article { background: var(--char-2); border-top: 3px solid var(--lime); padding: 26px 22px 30px; border-radius: 0 0 10px 10px; }
-.lens-grid h3 { font: 400 21px/1.25 var(--title); margin-top: 14px; }
+.lens-grid h3 { font: 700 21px/1.25 var(--title); margin-top: 14px; }
 .lens-grid p { color: #BDBDC4; font-size: 14px; margin-top: 10px; }
 .stack { margin-top: 72px; display: grid; grid-template-columns: 220px 1fr; gap: 24px; border-top: 1px solid rgba(255,255,255,.12); padding-top: 36px; }
 .stack h3 { font: 400 30px/1.1 var(--display); }
 .stack ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 .stack li { background: var(--lilac); color: var(--ink); border-radius: 10px; padding: 16px 18px; font-size: 14px; }
 .stack li:nth-child(2), .stack li:nth-child(3) { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.3); }
-.stack li b { display: block; font: 400 18px/1.3 var(--title); margin-bottom: 4px; }
+.stack li b { display: block; font: 700 18px/1.3 var(--title); margin-bottom: 4px; }
 .data .stack { margin-top: 0; border-top: 0; padding-top: 0; }
 @media (max-width: 900px) { .lenses { padding: 80px 0; } .lens-grid { grid-template-columns: 1fr 1fr; } .stack { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .lens-grid, .stack ul { grid-template-columns: 1fr; } }
@@ -223,7 +225,7 @@ nav.top ul a:hover { color: var(--lime); }
 .contact { padding: 130px 0 90px; background: #151517; }
 .contact .k { right: 4%; top: 70px; width: min(30vw, 340px); aspect-ratio: 69/92; color: var(--lime); }
 .contact h2 { font: 700 clamp(34px, 5vw, 60px)/1.1 var(--sans); letter-spacing: -.015em; max-width: 13ch; position: relative; }
-.contact .sub { font: 400 22px/1.4 var(--title); color: var(--lime); margin-top: 26px; }
+.contact .sub { font: 700 22px/1.4 var(--title); color: var(--lime); margin-top: 26px; }
 .contact .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; position: relative; }
 .contact .who { margin-top: 40px; font-size: 15px; color: #C9C9D1; }
 .contact .who b { color: #fff; font-weight: 700; }
@@ -260,13 +262,13 @@ footer img { height: 28px; width: auto; }
     <div class="wrap">
       <div class="copy">
         <p class="kicker">Credentials 2026</p>
-        <h1>The <em>intel</em> behind decisions.</h1>
+        <h1>The <em>intel</em> behind Decisions</h1>
         <p class="lede">Consumer insights, cultural intelligence and real-time monitoring for brands across MENA.</p>
         <div class="ctas">
           <a class="btn book" href="#contact">Book a call</a>
           <a class="btn ghost" href="#work">See our work</a>
         </div>
-        <p class="cities">CAIRO · RIYADH · DUBAI</p>
+        <p class="cities">CAIRO. RIYADH . DUBAI</p>
       </div>
     </div>
   </section>
@@ -275,14 +277,14 @@ footer img { height: 28px; width: auto; }
     <div class="k" aria-hidden="true"><svg><use href="#k"/></svg></div>
     <div class="wrap reveal">
       <h2>A boutique intelligence consultancy for brands in complex markets.</h2>
-      <p class="body">We help brands crack markets and guide them with intelligence that is digital-first and fast, with an AI arm, while keeping the research practices at the core of our analysis.</p>
-      <p class="body"><b>Culture-focused,</b> we work as your consumer insights arm: we provide intelligence across culture and nations, side by side with consumers, brands and their competition, and turn it into decisions you can act on, with <b>flexible partnership modules.</b></p>
+      <p class="body">We help brands crack markets &amp; guide them with intelligence that is digital-first, fast with an AI arm while maintaining the research practices at the core of our analysis.</p>
+      <p class="body"><b>Cultured focused,</b> we work as your Consumer Insights arm: we provide intelligence across culture, nations side by side consumers, brands &amp; their competition analysis and turn them into decisions you can act on with <b>flexible partnership modules</b>.</p>
       <div class="pillars">
-        <div><h3>Digital solutions</h3><p>Intelligence built from where your audience actually lives: social, search, news and digital behaviour, with diverse language coverage.</p></div>
-        <div><h3>Faster and more efficient</h3><p>Answers in weeks, not months, without losing depth.</p></div>
-        <div><h3>AI-powered infrastructure</h3><p>AI behavioural analysis, automated monitoring and always-on pipelines that scale from a one-off deep dive to live radars.</p></div>
+        <div><h3>Digital Solutions:</h3><p>Intelligence built from where your audience actually lives: social, search, news and digital behavior, with diverse language coverage.</p></div>
+        <div><h3>Faster &amp; more-efficient:</h3><p>Answers in weeks, not months, without losing depth.</p></div>
+        <div><h3>AI-powered infrastructure:</h3><p>AI behavioral analysis, automated monitoring and always-on pipelines that scale from a one-off deep dive to live radars.</p></div>
       </div>
-      <p class="tag">Boutique intelligence for brands in complex markets: digital, fast and accurate. Combining the best of both worlds.</p>
+      <p class="tag">Boutique intelligence for brands in complex markets:<br>digital, fast &amp; accurate. Combining the best of both worlds.</p>
     </div>
   </section>
 
@@ -292,7 +294,7 @@ footer img { height: 28px; width: auto; }
       <ol class="svc">
         <li><span class="num">01</span><h3>Brand / Industry Health Assessment</h3><p>Where your brand and category stand: perception, share of voice and competitors.</p></li>
         <li><span class="num">02</span><h3>Campaign Impact Assessment</h3><p>What a campaign actually moved in conversation and sentiment.</p></li>
-        <li><span class="num">03</span><h3>Brand LIVE Radars</h3><p>Always-on monitoring with early-warning flags, down to hourly updates, and monthly reports.</p></li>
+        <li><span class="num">03</span><h3>Brand LIVE Radars</h3><p>Always-on monitoring with early-warning flags, down to hourly updates &amp; monthly Reports</p></li>
         <li><span class="num">04</span><h3>Copy &amp; Ad Testing</h3><p>Test messaging and creative with real audiences before you spend.</p></li>
         <li><span class="num">05</span><h3>Product Concept Testing</h3><p>Validate a concept’s appeal, fit and barriers before launch.</p></li>
       </ol>
@@ -304,7 +306,7 @@ footer img { height: 28px; width: auto; }
       <p class="kicker">Our philosophy</p>
       <h2>Data alone is not enough.</h2>
       <p class="punch">It’s the <em>story within the data</em> that transforms brands.</p>
-      <p class="body"><b>We act as your dedicated research arm,</b> either by running the research ourselves or by connecting you with our network of partners, to turn the ask at hand into a quick win, be it an opportunity or a challenge.</p>
+      <p class="body">We act <b>as your dedicated research arm</b>; either through conducting the research solutions ourselves or connecting you with our network of partners to help you turn the ask at hand into a quick win; be it an opportunity or a challenge.</p>
     </div>
   </section>
 
@@ -322,7 +324,7 @@ footer img { height: 28px; width: auto; }
       <h2>Four lenses, one picture.</h2>
       <div class="lens-grid">
         <article><span class="num">01</span><h3>Digital Listening</h3><p>What people say about you, your category and your competitors, across social, news, blogs and forums.</p></article>
-        <article><span class="num">02</span><h3>AI Behavioural Analysis</h3><p>Who your audience is, what they follow and how each segment behaves.</p></article>
+        <article><span class="num">02</span><h3>AI Behavioral Analysis</h3><p>Who your audience is, what they follow and how each segment behaves.</p></article>
         <article><span class="num">03</span><h3>Digital Surveys</h3><p>Direct answers at scale, from in-branch QR surveys to online panels.</p></article>
         <article><span class="num">04</span><h3>Qualitative Partners</h3><p>Depth from interviews and focus groups, run with trusted research partners.</p></article>
       </div>
@@ -342,15 +344,14 @@ footer img { height: 28px; width: auto; }
           <ul class="drop"><li>Slow to move</li><li>Too long to deliver</li><li>Hundreds of slides</li></ul>
         </article>
         <article>
-          <h3>Digital tools</h3>
+          <h3>Digital Tools</h3>
           <h4>What we keep</h4>
           <ul class="keep"><li>The speed and reach of digital tools</li></ul>
           <h4>What we leave out</h4>
-          <ul class="drop"><li>Inaccurate sentiment</li><li>Irrelevant data</li><li>Culture-blind</li><li>Tons of data, no story</li><li>No context on needs</li><li>No recommendations</li></ul>
+          <ul class="drop"><li>Inaccurate sentiment</li><li>Irrelevant Data</li><li>Culture-blind</li><li>Tons of data, no story</li><li>No context on needs</li><li>No recommendations</li></ul>
         </article>
         <article class="ours">
           <h3>Our offering</h3>
-          <h4>How it works</h4>
           <div class="formula"><span>Human input</span><b>+</b><span>Tools and technology</span><b>=</b><span class="story">A well-tailored data story</span></div>
           <h4>The result</h4>
           <div class="result"><span>Fast</span><span>Accurate</span><span>Efficient</span></div>
@@ -362,12 +363,12 @@ footer img { height: 28px; width: auto; }
   <section class="lenses dark data">
     <div class="wrap reveal">
       <div class="stack">
-        <div><p class="kicker">Data sources</p><h3>The stack behind every insight.</h3></div>
+        <div><p class="kicker">Data sources:</p><h3>The stack behind every insight.</h3></div>
         <ul>
-          <li><b>Enterprise listening</b>Facebook, X, Instagram, YouTube, TikTok, news, blogs and forums.</li>
-          <li><b>Social analytics</b>Social media analytics and competitive benchmarking.</li>
-          <li><b>Global benchmarking</b>Competitive benchmarking across markets.</li>
-          <li><b>Audience intelligence</b>AI-powered audience and behavioural intelligence.</li>
+          <li><b>Talkwalker</b>Digital listening across Facebook, X, Instagram, YouTube, TikTok, news, blogs and forums.</li>
+          <li><b>Pulsar</b>Social media analytics and competitive benchmarking.</li>
+          <li><b>Statex</b>Global Competitive Benchmarking</li>
+          <li><b>Audiense</b>AI-powered audience and behavioral intelligence.</li>
         </ul>
       </div>
     </div>
@@ -389,17 +390,17 @@ footer img { height: 28px; width: auto; }
     <div class="main reveal">
       <p class="eyebrow">Netflix MENA</p>
       <h3>Fan intelligence behind Netflix’s Saudi Pro League documentary</h3>
-      <h4>The brief</h4>
+      <h4>The brief:</h4>
       <p>As Netflix MENA’s regional CI partner, we joined the content team in the research phase, before production began on a documentary that went on to stream on the platform.</p>
-      <h4>What we did</h4>
+      <h4>What we did:</h4>
       <p>We mapped how global audiences saw the SPL after Cristiano Ronaldo’s move in late 2022: the volume of conversation, the wave of transfers it triggered, and how each signing was received. We also tracked the sensitive reputational debates the league raised about Saudi Arabia.</p>
     </div>
     <div class="side netflix">
       <div class="logo"><img src="img/netflix-spl.jpg" alt="Netflix and Saudi Pro League" loading="lazy"></div>
-      <h4>What it influenced</h4>
+      <h4>What it influenced:</h4>
       <ol>
-        <li><div><b>Content recommendation</b><span>How to approach it and who to feature.</span></div></li>
-        <li><div><b>Fan-segment comms</b><span>A social approach for each club’s fan base across Saudi, built on AI behavioural analysis.</span></div></li>
+        <li><div><b>Content Recommendation</b><span>How to approach it &amp; who to feature</span></div></li>
+        <li><div><b>Fan-segment comms</b><span>A social approach for each club’s fan base across Saudi, built on AI behavioral analysis.</span></div></li>
         <li><div><b>Risk guardrails</b><span>Topics to avoid, keeping the story clear of controversy.</span></div></li>
       </ol>
     </div>
@@ -409,15 +410,15 @@ footer img { height: 28px; width: auto; }
     <div class="main reveal">
       <p class="eyebrow">NBA</p>
       <h3>Unlocking fan crossovers for the NBA across MENA</h3>
-      <h4>The brief</h4>
-      <p>How is basketball perceived across MENA, the Gulf and the Levant, and how does the NBA stack up against competing leagues?</p>
-      <h4>What we did</h4>
-      <p>We mapped the influencers and platforms that matter in each country, the content fans create about the NBA, and the local nicknames Arab fans give their favourite players.</p>
+      <h4>The brief:</h4>
+      <p>How is basketball perceived across MENA, the Gulf and the Levant — and how does the NBA stack up against competing leagues?</p>
+      <h4>What we did:</h4>
+      <p>We mapped the influencers and platforms that matter in each country, the content fans create about the NBA, and the local nicknames Arab fans give their favorite players.</p>
       <p>All of it fed a brand comms strategy built to resonate with MENA’s diverse audiences.</p>
     </div>
     <div class="side nba">
       <div class="logo"><img src="img/nba.jpg" alt="NBA" loading="lazy"></div>
-      <h4>What it influenced</h4>
+      <h4>What it influenced:</h4>
       <ol>
         <li><div><b>Consumption trends</b><span>On X, fans’ 2020 timelines were split between football and basketball.</span></div></li>
         <li><div><b>Fandom crossover</b><span>Football fans bored of FIFA tournament formats crossed from Copa América to the NBA, airing in the same window.</span></div></li>
@@ -430,15 +431,15 @@ footer img { height: 28px; width: auto; }
     <div class="main reveal">
       <p class="eyebrow">Costa Coffee</p>
       <h3>Decoding the Gulf’s taste in coffee for Costa</h3>
-      <h4>The brief</h4>
+      <h4>The brief:</h4>
       <p>A niche question that’s harder than it looks: does the bitterness of Costa’s bean range suit Gulf coffee drinkers?</p>
-      <h4>What we did</h4>
+      <h4>What we did:</h4>
       <p>A digital survey for branch visitors across the Gulf: a QR code in every branch, with a 20% discount for taking part.</p>
       <div class="stat"><strong>2,500+</strong><span>respondents across the Gulf</span></div>
     </div>
     <div class="side costa">
       <div class="logo"><img src="img/costa.jpg" alt="Costa Coffee" loading="lazy"></div>
-      <h4>What it influenced</h4>
+      <h4>What it influenced:</h4>
       <ol>
         <li><div><b>Competitive radar</b><span>Identified the local coffee shops with a growing fan base.</span></div></li>
         <li><div><b>A platform to own</b><span>A communication platform built on the premium taste and bitterness of Costa’s beans.</span></div></li>
@@ -451,15 +452,15 @@ footer img { height: 28px; width: auto; }
     <div class="main reveal">
       <p class="eyebrow">InstaPay</p>
       <h3>Safeguarding Egypt’s flagship of financial inclusion</h3>
-      <h4>The partnership</h4>
-      <p>Since early 2023, the early days of what is now the Egyptian government’s flagship fintech, we have protected the brand against rumours and carried users’ voices, from bill payments to fee concerns, to decision-makers.</p>
-      <h4>What we do</h4>
-      <p>A dedicated in-house team flags transfer and payment-sync issues around the clock. When transfer fees launched, we sent hourly sentiment and FAQ updates. During the Ramses Central fire, we showed how talk of Egypt’s digital transformation shifted, with InstaPay at its centre.</p>
+      <h4>The partnership:</h4>
+      <p>Since early 2023, the early days of what is now the Egyptian government’s flagship fintech. We have protected the brand against rumors and carried users’ voices, from bill payments to fee concerns, to decision-makers.</p>
+      <h4>What we do:</h4>
+      <p>A dedicated in-house team flags transfer and payment-sync issues around the clock. When transfer fees launched, we sent hourly sentiment and FAQ updates. During the Ramses Central fire, we showed how talk of Egypt’s digital transformation shifted, with InstaPay at its center.</p>
       <div class="chips"><span>24/7 issue flagging</span><span>Hourly sentiment updates</span></div>
     </div>
     <div class="side instapay">
       <div class="logo"><img src="img/instapay.jpg" alt="InstaPay" loading="lazy"></div>
-      <h4>What it influences</h4>
+      <h4>What it influences:</h4>
       <ol>
         <li><div><b>Stronger brand affinity</b><span>A closer relationship between users and the brand.</span></div></li>
         <li><div><b>Faster fixes</b><span>A timely head start on app bugs, before they became stories.</span></div></li>
@@ -472,18 +473,18 @@ footer img { height: 28px; width: auto; }
     <div class="main reveal">
       <p class="eyebrow">Independent study</p>
       <h3>Reading Saudi Arabia’s music scene through cultural intelligence</h3>
-      <h4>The study</h4>
-      <p>Our independent deep dive into fan behaviour, streaming preferences and rising local talent across Spotify, Anghami and Apple Music, during a pivotal entertainment surge.</p>
-      <h4>What we found</h4>
+      <h4>The study:</h4>
+      <p>Our independent deep dive into fan behavior, streaming preferences and rising local talent across Spotify, Anghami and Apple Music, during a pivotal entertainment surge.</p>
+      <h4>What we found:</h4>
       <p>Fan conversations, not platform deals, shape perception and turn local artists into national icons. Moments like Cairokee in Jeddah and Sherine in AlUla sparked surges far beyond streams. Segments ranged from K-pop superfans on Spotify to Arabic-classics loyalists on Anghami.</p>
     </div>
     <div class="side spotify">
       <div class="logo"><img src="img/spotify.jpg" alt="Spotify" loading="lazy"></div>
-      <h4>What it influences</h4>
+      <h4>What it influences:</h4>
       <ol>
         <li><div><b>Platform roles decoded</b><span>Each service plays a different role: performance tracking, playlist discovery, nostalgia.</span></div></li>
-        <li><div><b>Culture ripple effects</b><span>Concerts and viral collabs ripple across platforms and conversations.</span></div></li>
-        <li><div><b>Early talent radar</b><span>Rising regional voices, spotted early.</span></div></li>
+        <li><div><b>Culture ripple effects</b><span>Concerts, viral collabs ripple across platforms and conversations.</span></div></li>
+        <li><div><b>Early talent radar</b><span>Rising regional voices</span></div></li>
       </ol>
     </div>
   </section>
@@ -494,31 +495,32 @@ footer img { height: 28px; width: auto; }
         <div>
           <p class="eyebrow">Creative Industry Summit · Riyadh, Oct 2026</p>
           <h3>A live, AI-powered pulse of the Summit, on the venue screens</h3>
-          <h4>The brief</h4>
+          <h4>The brief:</h4>
           <p>Show attendees, speakers and organisers what the world was saying about Creative Summit قمة الإبداع, while it was happening.</p>
-          <h4>What we built</h4>
+          <h4>What we built:</h4>
           <p>A bilingual live dashboard, Arabic first, updated every hour. AI tagged sentiment, speakers and themes, and our analysts verified every post and wrote the story so far. A second view tracked the wider Saudi creative scene.</p>
           <div class="chips dark-chips"><span>Hourly updates</span><span>AI + analyst review</span></div>
         </div>
         <div class="kpi-box">
-          <p class="kpis-label">Event view, 3–5 Oct 2026</p>
+          <p class="kpis-label">Event view, 3–5 Oct 2026:</p>
           <div class="kpis">
             <div><strong>482</strong><span>conversations</span></div>
             <div><strong>74%</strong><span>positive share</span></div>
             <div><strong>68.1M</strong><span>potential reach</span></div>
           </div>
-          <p class="live">Still live: <a href="https://creative-summit-pulse.cis-live.workers.dev/" target="_blank" rel="noopener">see the dashboard →</a></p>
+          <p class="live">Live at <a href="https://creative-summit-pulse.cis-live.workers.dev/" target="_blank" rel="noopener">creative-summit-pulse.cis-live.workers.dev</a></p>
         </div>
       </div>
+      <h3 class="views-title reveal">Two views, one tap apart</h3>
       <div class="views reveal">
         <a href="https://creative-summit-pulse.cis-live.workers.dev/" target="_blank" rel="noopener">
           <div class="shot"><img src="img/case-event-dashboard.jpg" alt="" width="1400" height="788" loading="lazy"></div>
-          <h4>The event →</h4>
+          <h4>The event</h4>
           <p>The story so far, hourly volume, speakers, sessions, moments and voices from the venue, refreshed every hour.</p>
         </a>
         <a href="https://creative-summit-pulse.cis-live.workers.dev/?scene" target="_blank" rel="noopener">
           <div class="shot"><img src="img/case-scene-dashboard.jpg" alt="" width="1400" height="788" loading="lazy"></div>
-          <h4>The Saudi creative scene →</h4>
+          <h4>The Saudi creative scene</h4>
           <p>2,197 conversations and 337.1M potential reach across film, gaming, music, design, advertising and content.</p>
         </a>
       </div>

@@ -16,8 +16,9 @@ Read this first in any new session.
 - Not yet deployed. `wrangler.jsonc` is ready for Cloudflare Workers static assets.
 
 ## Rules (never break)
-1. **Never name the listening tool or any data-source tool** on the site. Tool names from
-   the deck are left out on purpose.
+1. **Site text matches the 2026 offering deck word for word**, tool names included
+   (Noor approved showing them on 2026-10-27). Fonts: Impact for titles, Lexend for
+   everything else. No Paytone One.
 2. Case studies only state what the deck or Noor has confirmed.
 
 ## Case studies on the page
