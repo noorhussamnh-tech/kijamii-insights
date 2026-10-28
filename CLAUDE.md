@@ -18,6 +18,15 @@ Read this first in any new session.
 - A duplicate Worker also called `kijamii-insights` (on cis-live.workers.dev) exists in
   Noor's Cloudflare account from an earlier setup click. It is not the live site.
 
+## Intelligence Library (`/library/`)
+- https://kijamii-insights.pages.dev/library/ : industry topics (`public/library/data.js`) and the
+  monthly Culture Pulse (`public/library/culture.js`, route `#/culture`). EN by default, عربي button.
+- Industry, not brand: commissioned studies never name the client or show brand results.
+  Culture Pulse takes only the culture, entertainment, trending-title and YouTube sections of the
+  monthly Netflix pulse deck; never its Netflix deep-dive or platform-vs-platform pages.
+- `sample: true` topics have made-up numbers and show in Team view only. Team view is not access control.
+- Its own look (Lexend, Paytone One, Playfair) is separate from the credentials page rules below.
+
 ## Rules (never break)
 1. **Site text matches the 2026 offering deck word for word**, tool names included
    (Noor approved showing them on 2026-10-27). Fonts: Impact for titles, Lexend for
