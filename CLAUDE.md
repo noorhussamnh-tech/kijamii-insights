@@ -13,7 +13,10 @@ Read this first in any new session.
 - One static page, `public/index.html`, with styles and scripts inline. No build step.
 - Booking link: `BOOKING_URL` in the script at the bottom of `index.html`.
 - Visitor counts: `public/analytics.js` (token empty = off).
-- Not yet deployed. `wrangler.jsonc` is ready for Cloudflare Workers static assets.
+- Live at https://kijamii-insights.pages.dev (Cloudflare Pages, connected to this repo:
+  branch `main`, no build command, output `public`). Every merge to `main` should deploy.
+- A duplicate Worker also called `kijamii-insights` (on cis-live.workers.dev) exists in
+  Noor's Cloudflare account from an earlier setup click. It is not the live site.
 
 ## Rules (never break)
 1. **Site text matches the 2026 offering deck word for word**, tool names included
