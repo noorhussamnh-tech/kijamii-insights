@@ -11,6 +11,7 @@ It is a plain static site in `public/`, with no build step and no server.
 | Path | What it is |
 |---|---|
 | `public/index.html` | The whole site: one page, with all styles and scripts inside it |
+| `public/library/` | Kijamii Intelligence Library: topics (`data.js`), monthly Culture Pulse (`culture.js`) |
 | `public/img/` | Client logos, case images and the Kijamii logo |
 | `public/assets/favicon.png` | Browser tab icon |
 | `public/analytics.js` | Visitor counts (Cloudflare Web Analytics). Off until a token is added |
